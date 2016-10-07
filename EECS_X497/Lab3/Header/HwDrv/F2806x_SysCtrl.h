@@ -60,9 +60,25 @@ union XCLK_REG {
 
 //Add PLLSTS bit structure here
 
+struct PLLSTS_BITS {
+	Uint16 PLLLOCKS:1;		//0		PLL lock status
+	Uint16 rsvd1:1;			//1		reserved
+	Uint16 PLLOFF:1;		//2		PLL off bit
+	Uint16 MCLKSTS:1;		//3		Missing clock status bit
+	Uint16 MCLKCLR:1;		//4		Missing clock clear bit
+	Uint16 OSCOFF:1;		//5		Oscillator clock detect
+	Uint16 MCLKOFF:1;		//6		Missing clock off
+	Uint16 DIVSEL:2;		//8:7	Divide select (/4 default)
+	Uint16 rsvd2:6;			//14:9	reserved
+	Uint16 NORMRDYE:1;		//15	VREG NORMRDY enable bit
+};
 
 //Add PLLSTS union here
 
+union PLLSTS_REG {
+	Uint16 all;
+	struct PLLSTS_BITS bit;
+};
 
 struct CLKCTL_BITS
 {     								// bits description
