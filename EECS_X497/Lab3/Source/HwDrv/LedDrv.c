@@ -27,6 +27,7 @@
 void ToggleLD2(void)
 {
 	//Add code to toggle GPIO34
+	GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
 	
 }
 //--- end of file -----------------------------------------------------

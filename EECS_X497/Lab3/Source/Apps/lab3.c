@@ -9,6 +9,8 @@
 #include "F2806x_Device.h"
 #include "F2806x_Gpio.h"
 #include "LedDrv.h"
+#include "F2806x_DevEmu.h"
+#include "F2806x_SysCtrl.h"
 
 // Private function Prototypes
 void Delay(int count);
@@ -29,7 +31,7 @@ void main(void){
 }
 
 void InitDevice(void){
-	InitSystemClock();
+	InitSystemClock(CPU_80MHz);
 	InitGpio();
 }
 
