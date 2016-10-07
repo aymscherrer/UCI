@@ -1,0 +1,1 @@
+"./F2806x_Startup.obj" "./Lab1.obj" "../F2806x-controlSTICK-RAM.cmd" "../F2806x_Headers_nonBIOS.cmd" -llibc.a 

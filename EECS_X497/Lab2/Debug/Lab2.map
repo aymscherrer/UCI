@@ -1,0 +1,232 @@
+******************************************************************************
+             TMS320C2000 Linker PC v15.12.3                    
+******************************************************************************
+>> Linked Wed Oct 05 14:34:03 2016
+
+OUTPUT FILE NAME:   <Lab2.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000a000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  BEGIN_M0              00000000   00000002  00000000  00000002  RWIX
+  L3DPSARAM             00009000   00001000  00000000  00001000  RWIX
+  L4SARAM               0000a000   00002000  00000164  00001e9c  RWIX
+  FPUTABLES             003fd860   000006a0  00000000  000006a0  R   
+  IQTABLES              003fdf00   00000b50  00000000  00000b50  R   
+  IQTABLES2             003fea50   0000008c  00000000  0000008c  R   
+  IQTABLES3             003feadc   000000aa  00000000  000000aa  R   
+  RESET                 003fffc0   00000002  00000000  00000002  R   
+
+PAGE 1:
+  M0SARAM               00000002   000003fe  0000000b  000003f3  RWIX
+  M1SARAM               00000400   00000400  00000300  00000100  RWIX
+  L0DPSARAM             00008000   00000800  00000000  00000800  RWIX
+  L1DPSARAM             00008800   00000400  00000000  00000400  RWIX
+  L2DPSARAM             00008c00   00000400  00000000  00000400  RWIX
+  L5DPSARAM             0000c000   00002000  00000000  00002000  RWIX
+  L6DPSARAM             0000e000   00002000  00000000  00002000  RWIX
+  L7DPSARAM             00010000   00002000  00000000  00002000  RWIX
+  L8DPSARAM             00012000   00002000  00000000  00002000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    0000a000    00000146     
+                  0000a000    00000056     rts2800_fpu32.lib : boot.obj (.text)
+                  0000a056    00000046                       : cpy_tbl.obj (.text)
+                  0000a09c    00000029                       : exit.obj (.text)
+                  0000a0c5    00000026     lab2.obj (.text)
+                  0000a0eb    0000001a     rts2800_fpu32.lib : cpy_utils.obj (.text)
+                  0000a105    00000019                       : args_main.obj (.text)
+                  0000a11e    0000000d     F2806x_Gpio.obj (.text)
+                  0000a12b    0000000b     F2806x_SysCtrl.obj (.text)
+                  0000a136    00000009     rts2800_fpu32.lib : _lock.obj (.text)
+                  0000a13f    00000004     LedDrv.obj (.text)
+                  0000a143    00000002     rts2800_fpu32.lib : pre_init.obj (.text)
+                  0000a145    00000001                       : startup.obj (.text)
+
+.cinit     0    0000a146    0000001e     
+                  0000a146    0000000e     rts2800_fpu32.lib : exit.obj (.cinit)
+                  0000a154    00000005                       : _lock.obj (.cinit:__lock)
+                  0000a159    00000005                       : _lock.obj (.cinit:__unlock)
+                  0000a15e    00000004     lab2.obj (.cinit)
+                  0000a162    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    0000a000    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot.obj (.reset)
+
+.bss       1    00000002    00000000     UNINITIALIZED
+
+.ebss      1    00000002    0000000b     UNINITIALIZED
+                  00000002    00000006     rts2800_fpu32.lib : exit.obj (.ebss)
+                  00000008    00000002                       : _lock.obj (.ebss:__lock)
+                  0000000a    00000002                       : _lock.obj (.ebss:__unlock)
+                  0000000c    00000001     lab2.obj (.ebss)
+
+.stack     1    00000400    00000300     UNINITIALIZED
+                  00000400    00000300     --HOLE--
+
+MODULE SUMMARY
+
+       Module               code   ro data   rw data
+       ------               ----   -------   -------
+    .\Source\Apps\
+       lab2.obj             38     0         5      
+    +--+--------------------+------+---------+---------+
+       Total:               38     0         5      
+                                                    
+    .\Source\HwDrv\
+       F2806x_Gpio.obj      13     0         0      
+       F2806x_SysCtrl.obj   11     0         0      
+       LedDrv.obj           4      0         0      
+    +--+--------------------+------+---------+---------+
+       Total:               28     0         0      
+                                                    
+    C:\ti\ccsv6\tools\compiler\c2000_15.12.3.LTS\lib\rts2800_fpu32.lib
+       boot.obj             86     0         0      
+       cpy_tbl.obj          70     0         0      
+       exit.obj             41     0         20     
+       cpy_utils.obj        26     0         0      
+       args_main.obj        25     0         0      
+       _lock.obj            9      0         14     
+       pre_init.obj         2      0         0      
+       startup.obj          1      0         0      
+    +--+--------------------+------+---------+---------+
+       Total:               260    0         34     
+                                                    
+       Stack:               0      0         768    
+    +--+--------------------+------+---------+---------+
+       Grand Total:         326    0         807    
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000002       0 (00000000)     ___TI_enable_exit_profile_output
+00000004       0 (00000000)     ___TI_cleanup_ptr
+00000006       0 (00000000)     ___TI_dtors_ptr
+00000008       0 (00000000)     __lock
+0000000a       0 (00000000)     __unlock
+0000000c       0 (00000000)     _toggleCount
+
+00000400      10 (00000400)     __stack
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                            
+----  -------   ----                            
+1     00000002  .bss                            
+0     0000a000  .text                           
+0     0000a09c  C$$EXIT                         
+0     0000a0d6  _Delay                          
+0     0000a0d1  _InitDevice                     
+0     0000a11e  _InitGpio                       
+0     0000a12b  _InitSystemClock                
+0     0000a13f  _ToggleLD2                      
+1     00000700  __STACK_END                     
+abs   00000300  __STACK_SIZE                    
+1     00000004  ___TI_cleanup_ptr               
+1     00000006  ___TI_dtors_ptr                 
+1     00000002  ___TI_enable_exit_profile_output
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+1     00000002  ___bss__                        
+abs   ffffffff  ___c_args__                     
+0     0000a146  ___cinit__                      
+1     00000002  ___end__                        
+0     0000a146  ___etext__                      
+abs   ffffffff  ___pinit__                      
+0     0000a000  ___text__                       
+0     0000a105  __args_main                     
+1     00000008  __lock                          
+0     0000a13e  __nop                           
+0     0000a13a  __register_lock                 
+0     0000a136  __register_unlock               
+1     00000400  __stack                         
+0     0000a145  __system_post_cinit             
+0     0000a143  __system_pre_init               
+1     0000000a  __unlock                        
+0     0000a09c  _abort                          
+0     0000a000  _c_int00                        
+0     0000a056  _copy_in                        
+0     0000a0eb  _ddcopy                         
+0     0000a0eb  _dpcopy                         
+0     0000a09e  _exit                           
+0     0000a0c5  _main                           
+0     0000a0eb  _pdcopy                         
+0     0000a0eb  _ppcopy                         
+1     0000000c  _toggleCount                    
+abs   ffffffff  binit                           
+0     0000a146  cinit                           
+1     00000002  end                             
+0     0000a146  etext                           
+abs   ffffffff  pinit                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                            
+----  -------   ----                            
+0     0000a000  .text                           
+0     0000a000  ___text__                       
+0     0000a000  _c_int00                        
+0     0000a056  _copy_in                        
+0     0000a09c  C$$EXIT                         
+0     0000a09c  _abort                          
+0     0000a09e  _exit                           
+0     0000a0c5  _main                           
+0     0000a0d1  _InitDevice                     
+0     0000a0d6  _Delay                          
+0     0000a0eb  _ddcopy                         
+0     0000a0eb  _dpcopy                         
+0     0000a0eb  _pdcopy                         
+0     0000a0eb  _ppcopy                         
+0     0000a105  __args_main                     
+0     0000a11e  _InitGpio                       
+0     0000a12b  _InitSystemClock                
+0     0000a136  __register_unlock               
+0     0000a13a  __register_lock                 
+0     0000a13e  __nop                           
+0     0000a13f  _ToggleLD2                      
+0     0000a143  __system_pre_init               
+0     0000a145  __system_post_cinit             
+0     0000a146  ___cinit__                      
+0     0000a146  ___etext__                      
+0     0000a146  cinit                           
+0     0000a146  etext                           
+1     00000002  .bss                            
+1     00000002  ___TI_enable_exit_profile_output
+1     00000002  ___bss__                        
+1     00000002  ___end__                        
+1     00000002  end                             
+1     00000004  ___TI_cleanup_ptr               
+1     00000006  ___TI_dtors_ptr                 
+1     00000008  __lock                          
+1     0000000a  __unlock                        
+1     0000000c  _toggleCount                    
+1     00000400  __stack                         
+1     00000700  __STACK_END                     
+abs   00000300  __STACK_SIZE                    
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  binit                           
+abs   ffffffff  pinit                           
+
+[48 symbols]
