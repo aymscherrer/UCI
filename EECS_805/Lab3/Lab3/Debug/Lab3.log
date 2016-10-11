@@ -1,4 +1,3 @@
-﻿  stdafx.cpp
-  Lab3.cpp
-\\vmware-host\shared folders\documents\github\uci\eecs_805\lab3\lab3\lab3.cpp(48): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'init_array'
-\\vmware-host\shared folders\documents\github\uci\eecs_805\lab3\lab3\lab3.cpp(53): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'copy_array'
+﻿  Lab3.cpp
+  Lab3.vcxproj -> \\vmware-host\Shared Folders\Documents\GitHub\UCI\EECS_805\Lab3\Debug\Lab3.exe
+  Lab3.vcxproj -> \\vmware-host\Shared Folders\Documents\GitHub\UCI\EECS_805\Lab3\Debug\Lab3.pdb (Full PDB)
