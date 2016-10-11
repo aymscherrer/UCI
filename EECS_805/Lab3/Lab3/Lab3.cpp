@@ -1,4 +1,4 @@
-// Code under MIT Licence
+// This project is licensed under the terms of the MIT license
 // Copyright (c) 2016 Aymeric SCHERRER
 // Lab3 
 
