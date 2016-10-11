@@ -1,5 +1,6 @@
+// Code under MIT Licence
+// Copyright (c) 2016 Aymeric SCHERRER
 // Lab3
-// Aymeric
 
 //ASSIGNMENT 1
 
